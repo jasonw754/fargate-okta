@@ -3,11 +3,15 @@
 {
 	"name": "API Server",
 
-	// Sets the run context to one level up instead of the .devcontainer folder.
-	"context": "../api",
-
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
-	"dockerFile": "../api/Dockerfile",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+
+	"service": "api",
+
+	"workspaceFolder": "/workspace",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},

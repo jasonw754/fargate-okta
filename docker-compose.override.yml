@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  api:
+    volumes:
+      - ./api:/workspace/app
+    working_dir: /workspace/app
+    environment:
+      - PYTHONPATH=/workspace/app/src
+      
